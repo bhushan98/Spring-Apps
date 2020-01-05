@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="str" class="java.lang.String">
+		<constructor-arg value="Hello Spring"/>
+	</bean>
+	
+	<bean id="greet" class="com.cg.ex1.Greeting">
+		<!-- Constructor reference injection -->
+		<constructor-arg ref="str"/> 
+		
+		<!-- Constructor value injection -->
+		<!-- <constructor-arg value= "Hello Spring"/> -->
+		
+		<!-- Setter value injection -->
+		<!-- <property name="message" value="Hello Spring"/>  -->
+		
+		
+	</bean>
+	
+</beans>
